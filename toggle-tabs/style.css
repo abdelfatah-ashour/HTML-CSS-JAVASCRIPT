@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: lightyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Arial, sans-serif;
+}
+
+.container-tab {
+  width: 600px;
+  height: 350px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  border: 2px solid rgb(250, 255, 204);
+  overflow: hidden;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+.wrapper-buttons {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: white;
+}
+
+.btn {
+  padding: 0.5rem;
+  border: 0;
+  outline: 0;
+  font-weight: 400;
+  line-height: 2.2;
+  text-transform: capitalize;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(27, 27, 27);
+}
+
+.btn:not(:first-of-type) {
+  margin-left: 1rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transition: cursor 0.5s ease;
+  -webkit-transition: cursor 0.5s ease;
+  -moz-transition: cursor 0.5s ease;
+  -ms-transition: cursor 0.5s ease;
+  -o-transition: cursor 0.5s ease;
+}
+
+.wrapper-tabs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: calc(100% - 60px);
+}
+
+.tab {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.first {
+  background-image: linear-gradient(to left, #fdf9ac, #f7eb4e);
+}
+
+.second {
+  background-image: linear-gradient(to left, #3bfff5, #0b88b9);
+}
+
+.third {
+  background-image: linear-gradient(to left, #f15aff, #bb03a2);
+}
+.active-btn {
+  color: lightskyblue;
+  border-bottom: 2px solid skyblue;
+}
+
+.active-tab {
+  display: block;
+  animation: opacity 0.5s;
+  -webkit-animation: opacity 0.5s;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
