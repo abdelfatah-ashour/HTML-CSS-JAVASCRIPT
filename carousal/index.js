@@ -8,12 +8,10 @@ btnPrev.addEventListener("click", () => {
     carousal.style.transform = `translateX(-${100 * (currentSlide - 1)}%)`;
     carousal.style.transition = "transform .5s ease-in";
     --currentSlide;
-    console.log(currentSlide);
   } else {
     carousal.style.transform = "translateX(-300%)";
     carousal.style.transition = "none";
     currentSlide = 3;
-    console.log(currentSlide);
   }
 });
 
@@ -22,11 +20,9 @@ btnNext.addEventListener("click", () => {
     carousal.style.transform = `translateX(-${100 * currentSlide}%)`;
     carousal.style.transition = "transform .5s ease-in";
     ++currentSlide;
-    console.log(currentSlide);
   } else {
     carousal.style.transform = "translateX(0)";
     carousal.style.transition = "none";
     currentSlide = 1;
-    console.log(currentSlide);
   }
 });
